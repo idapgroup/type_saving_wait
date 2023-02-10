@@ -1,3 +1,7 @@
+## 1.0.0
+
+- Unit tests added to project.
+
 ## 0.0.3
 
 - Example project added. 
