@@ -1,3 +1,7 @@
+## 0.0.3
+
+- Example project added. 
+
 ## 0.0.2
 
 - README.md -> Misspelling fixed.
