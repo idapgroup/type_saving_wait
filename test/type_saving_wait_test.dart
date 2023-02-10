@@ -5,7 +5,7 @@ class TestObject {}
 
 void main() {
   test('FutureSaving.wait2 should save values and values types', () async {
-    final aValue = TestObject();
+    final aValue = 15;
     final bValue = 3.14;
 
     final a = Future.value(aValue);
@@ -16,15 +16,15 @@ void main() {
       b,
     );
 
-    TestObject aResult = result.a;
+    int aResult = result.a;
     double bResult = result.b;
 
     expect(aResult, aValue);
     expect(bResult, bValue);
   });
   test('FutureSaving.wait3 should save values and values types', () async {
-    final aValue = TestObject();
-    final bValue = 3.14;
+    final aValue = -1;
+    final bValue = 15;
     final cValue = -1;
 
     final a = Future.value(aValue);
@@ -37,8 +37,8 @@ void main() {
       c,
     );
 
-    TestObject aResult = result.a;
-    double bResult = result.b;
+    int aResult = result.a;
+    int bResult = result.b;
     int cResult = result.c;
 
     expect(aResult, aValue);
@@ -46,9 +46,9 @@ void main() {
     expect(cResult, cValue);
   });
   test('FutureSaving.wait4 should save values and values types', () async {
-    final aValue = 3.14;
-    final bValue = TestObject();
-    final cValue = 3.14;
+    final aValue = -1;
+    final bValue = 3.14;
+    final cValue = TestObject();
     final dValue = 15;
 
     final a = Future.value(aValue);
@@ -63,9 +63,9 @@ void main() {
       d,
     );
 
-    double aResult = result.a;
-    TestObject bResult = result.b;
-    double cResult = result.c;
+    int aResult = result.a;
+    double bResult = result.b;
+    TestObject cResult = result.c;
     int dResult = result.d;
 
     expect(aResult, aValue);
@@ -75,10 +75,10 @@ void main() {
   });
   test('FutureSaving.wait5 should save values and values types', () async {
     final aValue = 15;
-    final bValue = TestObject();
-    final cValue = 3.14;
-    final dValue = 3.14;
-    final eValue = TestObject();
+    final bValue = 3.14;
+    final cValue = -1;
+    final dValue = TestObject();
+    final eValue = -1;
 
     final a = Future.value(aValue);
     final b = Future.value(bValue);
@@ -95,10 +95,10 @@ void main() {
     );
 
     int aResult = result.a;
-    TestObject bResult = result.b;
-    double cResult = result.c;
-    double dResult = result.d;
-    TestObject eResult = result.e;
+    double bResult = result.b;
+    int cResult = result.c;
+    TestObject dResult = result.d;
+    int eResult = result.e;
 
     expect(aResult, aValue);
     expect(bResult, bValue);
@@ -109,10 +109,10 @@ void main() {
   test('FutureSaving.wait6 should save values and values types', () async {
     final aValue = 15;
     final bValue = TestObject();
-    final cValue = 3.14;
-    final dValue = 15;
-    final eValue = 15;
-    final fValue = 15;
+    final cValue = TestObject();
+    final dValue = 3.14;
+    final eValue = TestObject();
+    final fValue = TestObject();
 
     final a = Future.value(aValue);
     final b = Future.value(bValue);
@@ -132,10 +132,10 @@ void main() {
 
     int aResult = result.a;
     TestObject bResult = result.b;
-    double cResult = result.c;
-    int dResult = result.d;
-    int eResult = result.e;
-    int fResult = result.f;
+    TestObject cResult = result.c;
+    double dResult = result.d;
+    TestObject eResult = result.e;
+    TestObject fResult = result.f;
 
     expect(aResult, aValue);
     expect(bResult, bValue);
@@ -150,7 +150,7 @@ void main() {
     final cValue = 15;
     final dValue = -1;
     final eValue = -1;
-    final fValue = -1;
+    final fValue = 15;
     final gValue = TestObject();
 
     final a = Future.value(aValue);
@@ -188,13 +188,13 @@ void main() {
     expect(gResult, gValue);
   });
   test('FutureSaving.wait8 should save values and values types', () async {
-    final aValue = TestObject();
-    final bValue = 3.14;
+    final aValue = -1;
+    final bValue = 15;
     final cValue = 15;
-    final dValue = 3.14;
+    final dValue = TestObject();
     final eValue = -1;
     final fValue = 15;
-    final gValue = TestObject();
+    final gValue = 15;
     final hValue = 3.14;
 
     final a = Future.value(aValue);
@@ -217,13 +217,13 @@ void main() {
       h,
     );
 
-    TestObject aResult = result.a;
-    double bResult = result.b;
+    int aResult = result.a;
+    int bResult = result.b;
     int cResult = result.c;
-    double dResult = result.d;
+    TestObject dResult = result.d;
     int eResult = result.e;
     int fResult = result.f;
-    TestObject gResult = result.g;
+    int gResult = result.g;
     double hResult = result.h;
 
     expect(aResult, aValue);
@@ -238,11 +238,11 @@ void main() {
   test('FutureSaving.wait9 should save values and values types', () async {
     final aValue = TestObject();
     final bValue = 15;
-    final cValue = 3.14;
-    final dValue = TestObject();
-    final eValue = 15;
+    final cValue = TestObject();
+    final dValue = -1;
+    final eValue = 3.14;
     final fValue = 15;
-    final gValue = -1;
+    final gValue = TestObject();
     final hValue = TestObject();
     final jValue = -1;
 
@@ -270,11 +270,11 @@ void main() {
 
     TestObject aResult = result.a;
     int bResult = result.b;
-    double cResult = result.c;
-    TestObject dResult = result.d;
-    int eResult = result.e;
+    TestObject cResult = result.c;
+    int dResult = result.d;
+    double eResult = result.e;
     int fResult = result.f;
-    int gResult = result.g;
+    TestObject gResult = result.g;
     TestObject hResult = result.h;
     int jResult = result.j;
 
@@ -289,16 +289,16 @@ void main() {
     expect(jResult, jValue);
   });
   test('FutureSaving.wait10 should save values and values types', () async {
-    final aValue = TestObject();
+    final aValue = -1;
     final bValue = 3.14;
-    final cValue = -1;
-    final dValue = TestObject();
-    final eValue = -1;
-    final fValue = TestObject();
-    final gValue = TestObject();
-    final hValue = TestObject();
-    final jValue = 15;
-    final kValue = 15;
+    final cValue = TestObject();
+    final dValue = -1;
+    final eValue = 15;
+    final fValue = 15;
+    final gValue = 15;
+    final hValue = 3.14;
+    final jValue = TestObject();
+    final kValue = -1;
 
     final a = Future.value(aValue);
     final b = Future.value(bValue);
@@ -324,15 +324,15 @@ void main() {
       k,
     );
 
-    TestObject aResult = result.a;
+    int aResult = result.a;
     double bResult = result.b;
-    int cResult = result.c;
-    TestObject dResult = result.d;
+    TestObject cResult = result.c;
+    int dResult = result.d;
     int eResult = result.e;
-    TestObject fResult = result.f;
-    TestObject gResult = result.g;
-    TestObject hResult = result.h;
-    int jResult = result.j;
+    int fResult = result.f;
+    int gResult = result.g;
+    double hResult = result.h;
+    TestObject jResult = result.j;
     int kResult = result.k;
 
     expect(aResult, aValue);
@@ -347,17 +347,17 @@ void main() {
     expect(kResult, kValue);
   });
   test('FutureSaving.wait11 should save values and values types', () async {
-    final aValue = 15;
-    final bValue = TestObject();
+    final aValue = 3.14;
+    final bValue = 3.14;
     final cValue = TestObject();
     final dValue = TestObject();
-    final eValue = -1;
-    final fValue = -1;
-    final gValue = -1;
+    final eValue = TestObject();
+    final fValue = TestObject();
+    final gValue = TestObject();
     final hValue = -1;
     final jValue = -1;
-    final kValue = -1;
-    final lValue = TestObject();
+    final kValue = TestObject();
+    final lValue = 15;
 
     final a = Future.value(aValue);
     final b = Future.value(bValue);
@@ -385,17 +385,17 @@ void main() {
       l,
     );
 
-    int aResult = result.a;
-    TestObject bResult = result.b;
+    double aResult = result.a;
+    double bResult = result.b;
     TestObject cResult = result.c;
     TestObject dResult = result.d;
-    int eResult = result.e;
-    int fResult = result.f;
-    int gResult = result.g;
+    TestObject eResult = result.e;
+    TestObject fResult = result.f;
+    TestObject gResult = result.g;
     int hResult = result.h;
     int jResult = result.j;
-    int kResult = result.k;
-    TestObject lResult = result.l;
+    TestObject kResult = result.k;
+    int lResult = result.l;
 
     expect(aResult, aValue);
     expect(bResult, bValue);
@@ -410,18 +410,18 @@ void main() {
     expect(lResult, lValue);
   });
   test('FutureSaving.wait12 should save values and values types', () async {
-    final aValue = 15;
+    final aValue = TestObject();
     final bValue = 15;
-    final cValue = 3.14;
-    final dValue = 3.14;
-    final eValue = TestObject();
-    final fValue = 15;
-    final gValue = -1;
-    final hValue = TestObject();
-    final jValue = 15;
+    final cValue = -1;
+    final dValue = -1;
+    final eValue = -1;
+    final fValue = -1;
+    final gValue = 3.14;
+    final hValue = -1;
+    final jValue = 3.14;
     final kValue = TestObject();
-    final lValue = 15;
-    final mValue = TestObject();
+    final lValue = -1;
+    final mValue = -1;
 
     final a = Future.value(aValue);
     final b = Future.value(bValue);
@@ -451,18 +451,18 @@ void main() {
       m,
     );
 
-    int aResult = result.a;
+    TestObject aResult = result.a;
     int bResult = result.b;
-    double cResult = result.c;
-    double dResult = result.d;
-    TestObject eResult = result.e;
+    int cResult = result.c;
+    int dResult = result.d;
+    int eResult = result.e;
     int fResult = result.f;
-    int gResult = result.g;
-    TestObject hResult = result.h;
-    int jResult = result.j;
+    double gResult = result.g;
+    int hResult = result.h;
+    double jResult = result.j;
     TestObject kResult = result.k;
     int lResult = result.l;
-    TestObject mResult = result.m;
+    int mResult = result.m;
 
     expect(aResult, aValue);
     expect(bResult, bValue);
@@ -478,19 +478,19 @@ void main() {
     expect(mResult, mValue);
   });
   test('FutureSaving.wait13 should save values and values types', () async {
-    final aValue = -1;
-    final bValue = 3.14;
-    final cValue = 15;
-    final dValue = 3.14;
+    final aValue = 3.14;
+    final bValue = 15;
+    final cValue = 3.14;
+    final dValue = -1;
     final eValue = -1;
-    final fValue = TestObject();
-    final gValue = 15;
-    final hValue = TestObject();
+    final fValue = 3.14;
+    final gValue = 3.14;
+    final hValue = 15;
     final jValue = TestObject();
-    final kValue = -1;
-    final lValue = 15;
+    final kValue = TestObject();
+    final lValue = -1;
     final mValue = -1;
-    final nValue = 15;
+    final nValue = -1;
 
     final a = Future.value(aValue);
     final b = Future.value(bValue);
@@ -522,16 +522,16 @@ void main() {
       n,
     );
 
-    int aResult = result.a;
-    double bResult = result.b;
-    int cResult = result.c;
-    double dResult = result.d;
+    double aResult = result.a;
+    int bResult = result.b;
+    double cResult = result.c;
+    int dResult = result.d;
     int eResult = result.e;
-    TestObject fResult = result.f;
-    int gResult = result.g;
-    TestObject hResult = result.h;
+    double fResult = result.f;
+    double gResult = result.g;
+    int hResult = result.h;
     TestObject jResult = result.j;
-    int kResult = result.k;
+    TestObject kResult = result.k;
     int lResult = result.l;
     int mResult = result.m;
     int nResult = result.n;
@@ -551,20 +551,20 @@ void main() {
     expect(nResult, nValue);
   });
   test('FutureSaving.wait14 should save values and values types', () async {
-    final aValue = 3.14;
-    final bValue = 15;
-    final cValue = -1;
-    final dValue = -1;
-    final eValue = TestObject();
+    final aValue = TestObject();
+    final bValue = -1;
+    final cValue = 15;
+    final dValue = TestObject();
+    final eValue = -1;
     final fValue = -1;
     final gValue = TestObject();
-    final hValue = 15;
-    final jValue = TestObject();
-    final kValue = TestObject();
-    final lValue = -1;
-    final mValue = TestObject();
-    final nValue = 3.14;
-    final pValue = 3.14;
+    final hValue = -1;
+    final jValue = 3.14;
+    final kValue = 3.14;
+    final lValue = 15;
+    final mValue = 15;
+    final nValue = -1;
+    final pValue = TestObject();
 
     final a = Future.value(aValue);
     final b = Future.value(bValue);
@@ -598,20 +598,20 @@ void main() {
       p,
     );
 
-    double aResult = result.a;
+    TestObject aResult = result.a;
     int bResult = result.b;
     int cResult = result.c;
-    int dResult = result.d;
-    TestObject eResult = result.e;
+    TestObject dResult = result.d;
+    int eResult = result.e;
     int fResult = result.f;
     TestObject gResult = result.g;
     int hResult = result.h;
-    TestObject jResult = result.j;
-    TestObject kResult = result.k;
+    double jResult = result.j;
+    double kResult = result.k;
     int lResult = result.l;
-    TestObject mResult = result.m;
-    double nResult = result.n;
-    double pResult = result.p;
+    int mResult = result.m;
+    int nResult = result.n;
+    TestObject pResult = result.p;
 
     expect(aResult, aValue);
     expect(bResult, bValue);
@@ -629,21 +629,21 @@ void main() {
     expect(pResult, pValue);
   });
   test('FutureSaving.wait15 should save values and values types', () async {
-    final aValue = 3.14;
+    final aValue = -1;
     final bValue = TestObject();
     final cValue = -1;
-    final dValue = 15;
-    final eValue = -1;
+    final dValue = -1;
+    final eValue = 15;
     final fValue = 15;
-    final gValue = TestObject();
-    final hValue = -1;
-    final jValue = 3.14;
-    final kValue = 15;
+    final gValue = 3.14;
+    final hValue = 15;
+    final jValue = -1;
+    final kValue = 3.14;
     final lValue = 15;
-    final mValue = TestObject();
-    final nValue = 15;
-    final pValue = 3.14;
-    final qValue = 3.14;
+    final mValue = 3.14;
+    final nValue = -1;
+    final pValue = -1;
+    final qValue = -1;
 
     final a = Future.value(aValue);
     final b = Future.value(bValue);
@@ -679,21 +679,21 @@ void main() {
       q,
     );
 
-    double aResult = result.a;
+    int aResult = result.a;
     TestObject bResult = result.b;
     int cResult = result.c;
     int dResult = result.d;
     int eResult = result.e;
     int fResult = result.f;
-    TestObject gResult = result.g;
+    double gResult = result.g;
     int hResult = result.h;
-    double jResult = result.j;
-    int kResult = result.k;
+    int jResult = result.j;
+    double kResult = result.k;
     int lResult = result.l;
-    TestObject mResult = result.m;
+    double mResult = result.m;
     int nResult = result.n;
-    double pResult = result.p;
-    double qResult = result.q;
+    int pResult = result.p;
+    int qResult = result.q;
 
     expect(aResult, aValue);
     expect(bResult, bValue);
@@ -712,22 +712,22 @@ void main() {
     expect(qResult, qValue);
   });
   test('FutureSaving.wait16 should save values and values types', () async {
-    final aValue = 3.14;
+    final aValue = TestObject();
     final bValue = 3.14;
-    final cValue = TestObject();
-    final dValue = 15;
-    final eValue = -1;
-    final fValue = -1;
+    final cValue = 3.14;
+    final dValue = 3.14;
+    final eValue = TestObject();
+    final fValue = 3.14;
     final gValue = 15;
-    final hValue = -1;
-    final jValue = 15;
-    final kValue = -1;
-    final lValue = 3.14;
-    final mValue = -1;
-    final nValue = TestObject();
-    final pValue = 15;
-    final qValue = 3.14;
-    final rValue = 15;
+    final hValue = TestObject();
+    final jValue = -1;
+    final kValue = 15;
+    final lValue = TestObject();
+    final mValue = TestObject();
+    final nValue = -1;
+    final pValue = 3.14;
+    final qValue = TestObject();
+    final rValue = TestObject();
 
     final a = Future.value(aValue);
     final b = Future.value(bValue);
@@ -765,22 +765,22 @@ void main() {
       r,
     );
 
-    double aResult = result.a;
+    TestObject aResult = result.a;
     double bResult = result.b;
-    TestObject cResult = result.c;
-    int dResult = result.d;
-    int eResult = result.e;
-    int fResult = result.f;
+    double cResult = result.c;
+    double dResult = result.d;
+    TestObject eResult = result.e;
+    double fResult = result.f;
     int gResult = result.g;
-    int hResult = result.h;
+    TestObject hResult = result.h;
     int jResult = result.j;
     int kResult = result.k;
-    double lResult = result.l;
-    int mResult = result.m;
-    TestObject nResult = result.n;
-    int pResult = result.p;
-    double qResult = result.q;
-    int rResult = result.r;
+    TestObject lResult = result.l;
+    TestObject mResult = result.m;
+    int nResult = result.n;
+    double pResult = result.p;
+    TestObject qResult = result.q;
+    TestObject rResult = result.r;
 
     expect(aResult, aValue);
     expect(bResult, bValue);
@@ -801,22 +801,22 @@ void main() {
   });
   test('FutureSaving.wait17 should save values and values types', () async {
     final aValue = 3.14;
-    final bValue = TestObject();
-    final cValue = TestObject();
+    final bValue = 15;
+    final cValue = 3.14;
     final dValue = TestObject();
-    final eValue = TestObject();
-    final fValue = 3.14;
+    final eValue = -1;
+    final fValue = TestObject();
     final gValue = 3.14;
-    final hValue = 3.14;
-    final jValue = 15;
-    final kValue = 15;
+    final hValue = TestObject();
+    final jValue = 3.14;
+    final kValue = TestObject();
     final lValue = 3.14;
-    final mValue = TestObject();
-    final nValue = TestObject();
-    final pValue = TestObject();
-    final qValue = 3.14;
-    final rValue = 15;
-    final sValue = 15;
+    final mValue = -1;
+    final nValue = 3.14;
+    final pValue = 3.14;
+    final qValue = 15;
+    final rValue = TestObject();
+    final sValue = TestObject();
 
     final a = Future.value(aValue);
     final b = Future.value(bValue);
@@ -857,22 +857,22 @@ void main() {
     );
 
     double aResult = result.a;
-    TestObject bResult = result.b;
-    TestObject cResult = result.c;
+    int bResult = result.b;
+    double cResult = result.c;
     TestObject dResult = result.d;
-    TestObject eResult = result.e;
-    double fResult = result.f;
+    int eResult = result.e;
+    TestObject fResult = result.f;
     double gResult = result.g;
-    double hResult = result.h;
-    int jResult = result.j;
-    int kResult = result.k;
+    TestObject hResult = result.h;
+    double jResult = result.j;
+    TestObject kResult = result.k;
     double lResult = result.l;
-    TestObject mResult = result.m;
-    TestObject nResult = result.n;
-    TestObject pResult = result.p;
-    double qResult = result.q;
-    int rResult = result.r;
-    int sResult = result.s;
+    int mResult = result.m;
+    double nResult = result.n;
+    double pResult = result.p;
+    int qResult = result.q;
+    TestObject rResult = result.r;
+    TestObject sResult = result.s;
 
     expect(aResult, aValue);
     expect(bResult, bValue);
@@ -893,24 +893,24 @@ void main() {
     expect(sResult, sValue);
   });
   test('FutureSaving.wait18 should save values and values types', () async {
-    final aValue = 3.14;
-    final bValue = TestObject();
-    final cValue = 3.14;
-    final dValue = -1;
-    final eValue = -1;
-    final fValue = 3.14;
-    final gValue = 3.14;
-    final hValue = -1;
-    final jValue = -1;
+    final aValue = -1;
+    final bValue = 3.14;
+    final cValue = 15;
+    final dValue = 15;
+    final eValue = TestObject();
+    final fValue = -1;
+    final gValue = TestObject();
+    final hValue = TestObject();
+    final jValue = TestObject();
     final kValue = 15;
-    final lValue = TestObject();
-    final mValue = 15;
-    final nValue = -1;
+    final lValue = 15;
+    final mValue = TestObject();
+    final nValue = TestObject();
     final pValue = 15;
-    final qValue = 3.14;
+    final qValue = 15;
     final rValue = -1;
-    final sValue = -1;
-    final tValue = 3.14;
+    final sValue = TestObject();
+    final tValue = -1;
 
     final a = Future.value(aValue);
     final b = Future.value(bValue);
@@ -952,24 +952,24 @@ void main() {
       t,
     );
 
-    double aResult = result.a;
-    TestObject bResult = result.b;
-    double cResult = result.c;
+    int aResult = result.a;
+    double bResult = result.b;
+    int cResult = result.c;
     int dResult = result.d;
-    int eResult = result.e;
-    double fResult = result.f;
-    double gResult = result.g;
-    int hResult = result.h;
-    int jResult = result.j;
+    TestObject eResult = result.e;
+    int fResult = result.f;
+    TestObject gResult = result.g;
+    TestObject hResult = result.h;
+    TestObject jResult = result.j;
     int kResult = result.k;
-    TestObject lResult = result.l;
-    int mResult = result.m;
-    int nResult = result.n;
+    int lResult = result.l;
+    TestObject mResult = result.m;
+    TestObject nResult = result.n;
     int pResult = result.p;
-    double qResult = result.q;
+    int qResult = result.q;
     int rResult = result.r;
-    int sResult = result.s;
-    double tResult = result.t;
+    TestObject sResult = result.s;
+    int tResult = result.t;
 
     expect(aResult, aValue);
     expect(bResult, bValue);
@@ -991,25 +991,25 @@ void main() {
     expect(tResult, tValue);
   });
   test('FutureSaving.wait19 should save values and values types', () async {
-    final aValue = TestObject();
-    final bValue = 15;
-    final cValue = 3.14;
-    final dValue = -1;
-    final eValue = 15;
+    final aValue = -1;
+    final bValue = 3.14;
+    final cValue = 15;
+    final dValue = 15;
+    final eValue = TestObject();
     final fValue = -1;
-    final gValue = -1;
-    final hValue = 3.14;
-    final jValue = 3.14;
+    final gValue = TestObject();
+    final hValue = 15;
+    final jValue = 15;
     final kValue = 3.14;
-    final lValue = TestObject();
-    final mValue = TestObject();
+    final lValue = 3.14;
+    final mValue = 3.14;
     final nValue = -1;
-    final pValue = -1;
-    final qValue = -1;
+    final pValue = TestObject();
+    final qValue = 15;
     final rValue = -1;
-    final sValue = 3.14;
-    final tValue = 3.14;
-    final uValue = -1;
+    final sValue = TestObject();
+    final tValue = 15;
+    final uValue = 15;
 
     final a = Future.value(aValue);
     final b = Future.value(bValue);
@@ -1053,24 +1053,24 @@ void main() {
       u,
     );
 
-    TestObject aResult = result.a;
-    int bResult = result.b;
-    double cResult = result.c;
+    int aResult = result.a;
+    double bResult = result.b;
+    int cResult = result.c;
     int dResult = result.d;
-    int eResult = result.e;
+    TestObject eResult = result.e;
     int fResult = result.f;
-    int gResult = result.g;
-    double hResult = result.h;
-    double jResult = result.j;
+    TestObject gResult = result.g;
+    int hResult = result.h;
+    int jResult = result.j;
     double kResult = result.k;
-    TestObject lResult = result.l;
-    TestObject mResult = result.m;
+    double lResult = result.l;
+    double mResult = result.m;
     int nResult = result.n;
-    int pResult = result.p;
+    TestObject pResult = result.p;
     int qResult = result.q;
     int rResult = result.r;
-    double sResult = result.s;
-    double tResult = result.t;
+    TestObject sResult = result.s;
+    int tResult = result.t;
     int uResult = result.u;
 
     expect(aResult, aValue);
@@ -1095,25 +1095,25 @@ void main() {
   });
   test('FutureSaving.wait20 should save values and values types', () async {
     final aValue = 3.14;
-    final bValue = 15;
-    final cValue = 15;
-    final dValue = TestObject();
+    final bValue = TestObject();
+    final cValue = -1;
+    final dValue = 15;
     final eValue = -1;
     final fValue = 3.14;
-    final gValue = 15;
+    final gValue = -1;
     final hValue = 15;
-    final jValue = 3.14;
-    final kValue = 15;
+    final jValue = -1;
+    final kValue = 3.14;
     final lValue = 15;
-    final mValue = 15;
-    final nValue = -1;
-    final pValue = -1;
-    final qValue = TestObject();
-    final rValue = 3.14;
-    final sValue = -1;
-    final tValue = 3.14;
-    final uValue = 3.14;
-    final vValue = 3.14;
+    final mValue = 3.14;
+    final nValue = TestObject();
+    final pValue = TestObject();
+    final qValue = 3.14;
+    final rValue = TestObject();
+    final sValue = TestObject();
+    final tValue = TestObject();
+    final uValue = 15;
+    final vValue = -1;
 
     final a = Future.value(aValue);
     final b = Future.value(bValue);
@@ -1160,25 +1160,25 @@ void main() {
     );
 
     double aResult = result.a;
-    int bResult = result.b;
+    TestObject bResult = result.b;
     int cResult = result.c;
-    TestObject dResult = result.d;
+    int dResult = result.d;
     int eResult = result.e;
     double fResult = result.f;
     int gResult = result.g;
     int hResult = result.h;
-    double jResult = result.j;
-    int kResult = result.k;
+    int jResult = result.j;
+    double kResult = result.k;
     int lResult = result.l;
-    int mResult = result.m;
-    int nResult = result.n;
-    int pResult = result.p;
-    TestObject qResult = result.q;
-    double rResult = result.r;
-    int sResult = result.s;
-    double tResult = result.t;
-    double uResult = result.u;
-    double vResult = result.v;
+    double mResult = result.m;
+    TestObject nResult = result.n;
+    TestObject pResult = result.p;
+    double qResult = result.q;
+    TestObject rResult = result.r;
+    TestObject sResult = result.s;
+    TestObject tResult = result.t;
+    int uResult = result.u;
+    int vResult = result.v;
 
     expect(aResult, aValue);
     expect(bResult, bValue);
@@ -1202,27 +1202,27 @@ void main() {
     expect(vResult, vValue);
   });
   test('FutureSaving.wait21 should save values and values types', () async {
-    final aValue = TestObject();
-    final bValue = TestObject();
-    final cValue = -1;
-    final dValue = TestObject();
-    final eValue = 15;
-    final fValue = -1;
-    final gValue = 3.14;
-    final hValue = TestObject();
-    final jValue = 15;
-    final kValue = -1;
-    final lValue = 3.14;
+    final aValue = -1;
+    final bValue = -1;
+    final cValue = TestObject();
+    final dValue = 15;
+    final eValue = TestObject();
+    final fValue = TestObject();
+    final gValue = -1;
+    final hValue = -1;
+    final jValue = TestObject();
+    final kValue = TestObject();
+    final lValue = 15;
     final mValue = 3.14;
-    final nValue = TestObject();
-    final pValue = TestObject();
+    final nValue = 3.14;
+    final pValue = 15;
     final qValue = -1;
     final rValue = -1;
-    final sValue = -1;
-    final tValue = -1;
-    final uValue = 15;
-    final vValue = 15;
-    final wValue = 15;
+    final sValue = 3.14;
+    final tValue = 15;
+    final uValue = 3.14;
+    final vValue = 3.14;
+    final wValue = 3.14;
 
     final a = Future.value(aValue);
     final b = Future.value(bValue);
@@ -1270,27 +1270,27 @@ void main() {
       w,
     );
 
-    TestObject aResult = result.a;
-    TestObject bResult = result.b;
-    int cResult = result.c;
-    TestObject dResult = result.d;
-    int eResult = result.e;
-    int fResult = result.f;
-    double gResult = result.g;
-    TestObject hResult = result.h;
-    int jResult = result.j;
-    int kResult = result.k;
-    double lResult = result.l;
+    int aResult = result.a;
+    int bResult = result.b;
+    TestObject cResult = result.c;
+    int dResult = result.d;
+    TestObject eResult = result.e;
+    TestObject fResult = result.f;
+    int gResult = result.g;
+    int hResult = result.h;
+    TestObject jResult = result.j;
+    TestObject kResult = result.k;
+    int lResult = result.l;
     double mResult = result.m;
-    TestObject nResult = result.n;
-    TestObject pResult = result.p;
+    double nResult = result.n;
+    int pResult = result.p;
     int qResult = result.q;
     int rResult = result.r;
-    int sResult = result.s;
+    double sResult = result.s;
     int tResult = result.t;
-    int uResult = result.u;
-    int vResult = result.v;
-    int wResult = result.w;
+    double uResult = result.u;
+    double vResult = result.v;
+    double wResult = result.w;
 
     expect(aResult, aValue);
     expect(bResult, bValue);
@@ -1315,28 +1315,28 @@ void main() {
     expect(wResult, wValue);
   });
   test('FutureSaving.wait22 should save values and values types', () async {
-    final aValue = 15;
-    final bValue = 15;
-    final cValue = 3.14;
+    final aValue = -1;
+    final bValue = -1;
+    final cValue = TestObject();
     final dValue = TestObject();
-    final eValue = TestObject();
-    final fValue = 15;
-    final gValue = 3.14;
-    final hValue = -1;
-    final jValue = TestObject();
-    final kValue = 15;
-    final lValue = 15;
-    final mValue = 15;
-    final nValue = TestObject();
+    final eValue = -1;
+    final fValue = 3.14;
+    final gValue = -1;
+    final hValue = 3.14;
+    final jValue = 15;
+    final kValue = 3.14;
+    final lValue = -1;
+    final mValue = 3.14;
+    final nValue = -1;
     final pValue = -1;
-    final qValue = TestObject();
+    final qValue = 3.14;
     final rValue = 15;
-    final sValue = TestObject();
-    final tValue = TestObject();
-    final uValue = -1;
+    final sValue = 3.14;
+    final tValue = 3.14;
+    final uValue = 3.14;
     final vValue = -1;
-    final wValue = -1;
-    final xValue = 3.14;
+    final wValue = TestObject();
+    final xValue = -1;
 
     final a = Future.value(aValue);
     final b = Future.value(bValue);
@@ -1388,26 +1388,26 @@ void main() {
 
     int aResult = result.a;
     int bResult = result.b;
-    double cResult = result.c;
+    TestObject cResult = result.c;
     TestObject dResult = result.d;
-    TestObject eResult = result.e;
-    int fResult = result.f;
-    double gResult = result.g;
-    int hResult = result.h;
-    TestObject jResult = result.j;
-    int kResult = result.k;
+    int eResult = result.e;
+    double fResult = result.f;
+    int gResult = result.g;
+    double hResult = result.h;
+    int jResult = result.j;
+    double kResult = result.k;
     int lResult = result.l;
-    int mResult = result.m;
-    TestObject nResult = result.n;
+    double mResult = result.m;
+    int nResult = result.n;
     int pResult = result.p;
-    TestObject qResult = result.q;
+    double qResult = result.q;
     int rResult = result.r;
-    TestObject sResult = result.s;
-    TestObject tResult = result.t;
-    int uResult = result.u;
+    double sResult = result.s;
+    double tResult = result.t;
+    double uResult = result.u;
     int vResult = result.v;
-    int wResult = result.w;
-    double xResult = result.x;
+    TestObject wResult = result.w;
+    int xResult = result.x;
 
     expect(aResult, aValue);
     expect(bResult, bValue);
@@ -1434,28 +1434,28 @@ void main() {
   });
   test('FutureSaving.wait23 should save values and values types', () async {
     final aValue = -1;
-    final bValue = 3.14;
-    final cValue = TestObject();
-    final dValue = TestObject();
-    final eValue = TestObject();
+    final bValue = TestObject();
+    final cValue = 15;
+    final dValue = 15;
+    final eValue = -1;
     final fValue = 15;
-    final gValue = 15;
-    final hValue = 3.14;
-    final jValue = -1;
+    final gValue = 3.14;
+    final hValue = TestObject();
+    final jValue = 15;
     final kValue = TestObject();
     final lValue = -1;
-    final mValue = TestObject();
-    final nValue = 15;
-    final pValue = -1;
-    final qValue = TestObject();
-    final rValue = 15;
+    final mValue = -1;
+    final nValue = TestObject();
+    final pValue = TestObject();
+    final qValue = -1;
+    final rValue = 3.14;
     final sValue = 15;
-    final tValue = -1;
-    final uValue = TestObject();
-    final vValue = TestObject();
-    final wValue = 3.14;
-    final xValue = 15;
-    final yValue = 3.14;
+    final tValue = TestObject();
+    final uValue = -1;
+    final vValue = 15;
+    final wValue = 15;
+    final xValue = 3.14;
+    final yValue = -1;
 
     final a = Future.value(aValue);
     final b = Future.value(bValue);
@@ -1508,28 +1508,28 @@ void main() {
     );
 
     int aResult = result.a;
-    double bResult = result.b;
-    TestObject cResult = result.c;
-    TestObject dResult = result.d;
-    TestObject eResult = result.e;
+    TestObject bResult = result.b;
+    int cResult = result.c;
+    int dResult = result.d;
+    int eResult = result.e;
     int fResult = result.f;
-    int gResult = result.g;
-    double hResult = result.h;
+    double gResult = result.g;
+    TestObject hResult = result.h;
     int jResult = result.j;
     TestObject kResult = result.k;
     int lResult = result.l;
-    TestObject mResult = result.m;
-    int nResult = result.n;
-    int pResult = result.p;
-    TestObject qResult = result.q;
-    int rResult = result.r;
+    int mResult = result.m;
+    TestObject nResult = result.n;
+    TestObject pResult = result.p;
+    int qResult = result.q;
+    double rResult = result.r;
     int sResult = result.s;
-    int tResult = result.t;
-    TestObject uResult = result.u;
-    TestObject vResult = result.v;
-    double wResult = result.w;
-    int xResult = result.x;
-    double yResult = result.y;
+    TestObject tResult = result.t;
+    int uResult = result.u;
+    int vResult = result.v;
+    int wResult = result.w;
+    double xResult = result.x;
+    int yResult = result.y;
 
     expect(aResult, aValue);
     expect(bResult, bValue);
@@ -1556,30 +1556,30 @@ void main() {
     expect(yResult, yValue);
   });
   test('FutureSaving.wait24 should save values and values types', () async {
-    final aValue = 3.14;
-    final bValue = 15;
-    final cValue = -1;
-    final dValue = TestObject();
+    final aValue = 15;
+    final bValue = -1;
+    final cValue = TestObject();
+    final dValue = -1;
     final eValue = 3.14;
-    final fValue = TestObject();
+    final fValue = 15;
     final gValue = TestObject();
-    final hValue = -1;
+    final hValue = TestObject();
     final jValue = 3.14;
-    final kValue = TestObject();
-    final lValue = TestObject();
-    final mValue = TestObject();
-    final nValue = 3.14;
+    final kValue = 3.14;
+    final lValue = -1;
+    final mValue = 15;
+    final nValue = TestObject();
     final pValue = -1;
-    final qValue = TestObject();
-    final rValue = -1;
-    final sValue = 3.14;
+    final qValue = 15;
+    final rValue = 15;
+    final sValue = -1;
     final tValue = TestObject();
-    final uValue = -1;
-    final vValue = TestObject();
+    final uValue = 3.14;
+    final vValue = 3.14;
     final wValue = TestObject();
     final xValue = 15;
-    final yValue = 3.14;
-    final zValue = -1;
+    final yValue = TestObject();
+    final zValue = 3.14;
 
     final a = Future.value(aValue);
     final b = Future.value(bValue);
@@ -1633,30 +1633,30 @@ void main() {
       z,
     );
 
-    double aResult = result.a;
+    int aResult = result.a;
     int bResult = result.b;
-    int cResult = result.c;
-    TestObject dResult = result.d;
+    TestObject cResult = result.c;
+    int dResult = result.d;
     double eResult = result.e;
-    TestObject fResult = result.f;
+    int fResult = result.f;
     TestObject gResult = result.g;
-    int hResult = result.h;
+    TestObject hResult = result.h;
     double jResult = result.j;
-    TestObject kResult = result.k;
-    TestObject lResult = result.l;
-    TestObject mResult = result.m;
-    double nResult = result.n;
+    double kResult = result.k;
+    int lResult = result.l;
+    int mResult = result.m;
+    TestObject nResult = result.n;
     int pResult = result.p;
-    TestObject qResult = result.q;
+    int qResult = result.q;
     int rResult = result.r;
-    double sResult = result.s;
+    int sResult = result.s;
     TestObject tResult = result.t;
-    int uResult = result.u;
-    TestObject vResult = result.v;
+    double uResult = result.u;
+    double vResult = result.v;
     TestObject wResult = result.w;
     int xResult = result.x;
-    double yResult = result.y;
-    int zResult = result.z;
+    TestObject yResult = result.y;
+    double zResult = result.z;
 
     expect(aResult, aValue);
     expect(bResult, bValue);

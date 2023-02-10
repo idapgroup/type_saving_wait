@@ -100,17 +100,29 @@ void generateFutures(String alphabet, int length) {
   String result = 'library type_saving_wait;\n\n';
   result += 'import \'package:type_saving_wait/tuples.dart\';\n\n';
   result +=
-      '///Currently is not possible to create static function in Extension\n';
+      '/// Currently is not possible to create static function in Extension\n';
   result +=
-      '///so now we need to use FutureSaving.wait, instead of Future.wait\n';
+      '/// so now we need to use FutureSaving.wait, instead of Future.wait\n';
   result += 'extension FutureSaving on Future {\n\n';
 
   for (var i = 2; i <= length; i++) {
     final letters = alphabet.substring(0, i);
     final splitted = letters.split('');
 
-    result +=
-        '///Function for save $i arguments types\nstatic Future<FutureResult$i<\$0';
+    result += '/// Function for save $i arguments types\n';
+
+    result += '\$0';
+    var k = 0;
+    for (var element in splitted) {
+      result = result.replaceAll('\$0',
+          '/// [${element.toLowerCase()}] is ${k++} element of container');
+
+      result += '\n\$0';
+    }
+
+    result = result.replaceAll('\n\$0', '\n');
+
+    result += 'static Future<FutureResult$i<\$0';
 
     for (var element in splitted) {
       result = result.replaceAll('\$0', element);
@@ -173,7 +185,7 @@ void generateTuples(String alphabet, int length) {
     final letters = alphabet.substring(0, i);
     final splitted = letters.split('');
     String result =
-        '///Class for handle $i arguments inside\nclass FutureResult$i<\$0';
+        '/// Class for handle $i arguments inside\nclass FutureResult$i<\$0';
 
     for (var element in splitted) {
       result = result.replaceAll('\$0', element);
@@ -182,10 +194,10 @@ void generateTuples(String alphabet, int length) {
     }
 
     result = result.replaceAll(', \$0', '> { \n\$0');
-
+    var j = 1;
     for (var element in splitted) {
-      result = result.replaceAll(
-          '\$0', 'final $element ${element.toLowerCase()};\n');
+      result = result.replaceAll('\$0',
+          '/// [${element.toLowerCase()}] is ${j++} element of container \nfinal $element ${element.toLowerCase()};\n');
 
       result += '\$0';
     }

@@ -2,10 +2,12 @@ library type_saving_wait;
 
 import 'package:type_saving_wait/tuples.dart';
 
-///Currently is not possible to create static function in Extension
-///so now we need to use FutureSaving.wait, instead of Future.wait
+/// Currently is not possible to create static function in Extension
+/// so now we need to use FutureSaving.wait, instead of Future.wait
 extension FutureSaving on Future {
-  ///Function for save 2 arguments types
+  /// Function for save 2 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
   static Future<FutureResult2<A, B>> wait2<A, B>(
     Future<A> a,
     Future<B> b,
@@ -23,7 +25,10 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 3 arguments types
+  /// Function for save 3 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
   static Future<FutureResult3<A, B, C>> wait3<A, B, C>(
     Future<A> a,
     Future<B> b,
@@ -44,7 +49,11 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 4 arguments types
+  /// Function for save 4 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
+  /// [d] is 3 element of container
   static Future<FutureResult4<A, B, C, D>> wait4<A, B, C, D>(
     Future<A> a,
     Future<B> b,
@@ -68,7 +77,12 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 5 arguments types
+  /// Function for save 5 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
+  /// [d] is 3 element of container
+  /// [e] is 4 element of container
   static Future<FutureResult5<A, B, C, D, E>> wait5<A, B, C, D, E>(
     Future<A> a,
     Future<B> b,
@@ -95,7 +109,13 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 6 arguments types
+  /// Function for save 6 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
+  /// [d] is 3 element of container
+  /// [e] is 4 element of container
+  /// [f] is 5 element of container
   static Future<FutureResult6<A, B, C, D, E, F>> wait6<A, B, C, D, E, F>(
     Future<A> a,
     Future<B> b,
@@ -125,7 +145,14 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 7 arguments types
+  /// Function for save 7 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
+  /// [d] is 3 element of container
+  /// [e] is 4 element of container
+  /// [f] is 5 element of container
+  /// [g] is 6 element of container
   static Future<FutureResult7<A, B, C, D, E, F, G>> wait7<A, B, C, D, E, F, G>(
     Future<A> a,
     Future<B> b,
@@ -158,7 +185,15 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 8 arguments types
+  /// Function for save 8 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
+  /// [d] is 3 element of container
+  /// [e] is 4 element of container
+  /// [f] is 5 element of container
+  /// [g] is 6 element of container
+  /// [h] is 7 element of container
   static Future<FutureResult8<A, B, C, D, E, F, G, H>>
       wait8<A, B, C, D, E, F, G, H>(
     Future<A> a,
@@ -195,7 +230,16 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 9 arguments types
+  /// Function for save 9 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
+  /// [d] is 3 element of container
+  /// [e] is 4 element of container
+  /// [f] is 5 element of container
+  /// [g] is 6 element of container
+  /// [h] is 7 element of container
+  /// [j] is 8 element of container
   static Future<FutureResult9<A, B, C, D, E, F, G, H, J>>
       wait9<A, B, C, D, E, F, G, H, J>(
     Future<A> a,
@@ -235,7 +279,17 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 10 arguments types
+  /// Function for save 10 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
+  /// [d] is 3 element of container
+  /// [e] is 4 element of container
+  /// [f] is 5 element of container
+  /// [g] is 6 element of container
+  /// [h] is 7 element of container
+  /// [j] is 8 element of container
+  /// [k] is 9 element of container
   static Future<FutureResult10<A, B, C, D, E, F, G, H, J, K>>
       wait10<A, B, C, D, E, F, G, H, J, K>(
     Future<A> a,
@@ -278,7 +332,18 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 11 arguments types
+  /// Function for save 11 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
+  /// [d] is 3 element of container
+  /// [e] is 4 element of container
+  /// [f] is 5 element of container
+  /// [g] is 6 element of container
+  /// [h] is 7 element of container
+  /// [j] is 8 element of container
+  /// [k] is 9 element of container
+  /// [l] is 10 element of container
   static Future<FutureResult11<A, B, C, D, E, F, G, H, J, K, L>>
       wait11<A, B, C, D, E, F, G, H, J, K, L>(
     Future<A> a,
@@ -324,7 +389,19 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 12 arguments types
+  /// Function for save 12 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
+  /// [d] is 3 element of container
+  /// [e] is 4 element of container
+  /// [f] is 5 element of container
+  /// [g] is 6 element of container
+  /// [h] is 7 element of container
+  /// [j] is 8 element of container
+  /// [k] is 9 element of container
+  /// [l] is 10 element of container
+  /// [m] is 11 element of container
   static Future<FutureResult12<A, B, C, D, E, F, G, H, J, K, L, M>>
       wait12<A, B, C, D, E, F, G, H, J, K, L, M>(
     Future<A> a,
@@ -373,7 +450,20 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 13 arguments types
+  /// Function for save 13 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
+  /// [d] is 3 element of container
+  /// [e] is 4 element of container
+  /// [f] is 5 element of container
+  /// [g] is 6 element of container
+  /// [h] is 7 element of container
+  /// [j] is 8 element of container
+  /// [k] is 9 element of container
+  /// [l] is 10 element of container
+  /// [m] is 11 element of container
+  /// [n] is 12 element of container
   static Future<FutureResult13<A, B, C, D, E, F, G, H, J, K, L, M, N>>
       wait13<A, B, C, D, E, F, G, H, J, K, L, M, N>(
     Future<A> a,
@@ -425,7 +515,21 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 14 arguments types
+  /// Function for save 14 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
+  /// [d] is 3 element of container
+  /// [e] is 4 element of container
+  /// [f] is 5 element of container
+  /// [g] is 6 element of container
+  /// [h] is 7 element of container
+  /// [j] is 8 element of container
+  /// [k] is 9 element of container
+  /// [l] is 10 element of container
+  /// [m] is 11 element of container
+  /// [n] is 12 element of container
+  /// [p] is 13 element of container
   static Future<FutureResult14<A, B, C, D, E, F, G, H, J, K, L, M, N, P>>
       wait14<A, B, C, D, E, F, G, H, J, K, L, M, N, P>(
     Future<A> a,
@@ -480,7 +584,22 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 15 arguments types
+  /// Function for save 15 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
+  /// [d] is 3 element of container
+  /// [e] is 4 element of container
+  /// [f] is 5 element of container
+  /// [g] is 6 element of container
+  /// [h] is 7 element of container
+  /// [j] is 8 element of container
+  /// [k] is 9 element of container
+  /// [l] is 10 element of container
+  /// [m] is 11 element of container
+  /// [n] is 12 element of container
+  /// [p] is 13 element of container
+  /// [q] is 14 element of container
   static Future<FutureResult15<A, B, C, D, E, F, G, H, J, K, L, M, N, P, Q>>
       wait15<A, B, C, D, E, F, G, H, J, K, L, M, N, P, Q>(
     Future<A> a,
@@ -538,7 +657,23 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 16 arguments types
+  /// Function for save 16 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
+  /// [d] is 3 element of container
+  /// [e] is 4 element of container
+  /// [f] is 5 element of container
+  /// [g] is 6 element of container
+  /// [h] is 7 element of container
+  /// [j] is 8 element of container
+  /// [k] is 9 element of container
+  /// [l] is 10 element of container
+  /// [m] is 11 element of container
+  /// [n] is 12 element of container
+  /// [p] is 13 element of container
+  /// [q] is 14 element of container
+  /// [r] is 15 element of container
   static Future<FutureResult16<A, B, C, D, E, F, G, H, J, K, L, M, N, P, Q, R>>
       wait16<A, B, C, D, E, F, G, H, J, K, L, M, N, P, Q, R>(
     Future<A> a,
@@ -599,7 +734,24 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 17 arguments types
+  /// Function for save 17 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
+  /// [d] is 3 element of container
+  /// [e] is 4 element of container
+  /// [f] is 5 element of container
+  /// [g] is 6 element of container
+  /// [h] is 7 element of container
+  /// [j] is 8 element of container
+  /// [k] is 9 element of container
+  /// [l] is 10 element of container
+  /// [m] is 11 element of container
+  /// [n] is 12 element of container
+  /// [p] is 13 element of container
+  /// [q] is 14 element of container
+  /// [r] is 15 element of container
+  /// [s] is 16 element of container
   static Future<
           FutureResult17<A, B, C, D, E, F, G, H, J, K, L, M, N, P, Q, R, S>>
       wait17<A, B, C, D, E, F, G, H, J, K, L, M, N, P, Q, R, S>(
@@ -664,7 +816,25 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 18 arguments types
+  /// Function for save 18 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
+  /// [d] is 3 element of container
+  /// [e] is 4 element of container
+  /// [f] is 5 element of container
+  /// [g] is 6 element of container
+  /// [h] is 7 element of container
+  /// [j] is 8 element of container
+  /// [k] is 9 element of container
+  /// [l] is 10 element of container
+  /// [m] is 11 element of container
+  /// [n] is 12 element of container
+  /// [p] is 13 element of container
+  /// [q] is 14 element of container
+  /// [r] is 15 element of container
+  /// [s] is 16 element of container
+  /// [t] is 17 element of container
   static Future<
           FutureResult18<A, B, C, D, E, F, G, H, J, K, L, M, N, P, Q, R, S, T>>
       wait18<A, B, C, D, E, F, G, H, J, K, L, M, N, P, Q, R, S, T>(
@@ -732,7 +902,26 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 19 arguments types
+  /// Function for save 19 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
+  /// [d] is 3 element of container
+  /// [e] is 4 element of container
+  /// [f] is 5 element of container
+  /// [g] is 6 element of container
+  /// [h] is 7 element of container
+  /// [j] is 8 element of container
+  /// [k] is 9 element of container
+  /// [l] is 10 element of container
+  /// [m] is 11 element of container
+  /// [n] is 12 element of container
+  /// [p] is 13 element of container
+  /// [q] is 14 element of container
+  /// [r] is 15 element of container
+  /// [s] is 16 element of container
+  /// [t] is 17 element of container
+  /// [u] is 18 element of container
   static Future<
       FutureResult19<A, B, C, D, E, F, G, H, J, K, L, M, N, P, Q, R, S, T,
           U>> wait19<A, B, C, D, E, F, G, H, J, K, L, M, N, P, Q, R, S, T, U>(
@@ -803,7 +992,27 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 20 arguments types
+  /// Function for save 20 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
+  /// [d] is 3 element of container
+  /// [e] is 4 element of container
+  /// [f] is 5 element of container
+  /// [g] is 6 element of container
+  /// [h] is 7 element of container
+  /// [j] is 8 element of container
+  /// [k] is 9 element of container
+  /// [l] is 10 element of container
+  /// [m] is 11 element of container
+  /// [n] is 12 element of container
+  /// [p] is 13 element of container
+  /// [q] is 14 element of container
+  /// [r] is 15 element of container
+  /// [s] is 16 element of container
+  /// [t] is 17 element of container
+  /// [u] is 18 element of container
+  /// [v] is 19 element of container
   static Future<
           FutureResult20<A, B, C, D, E, F, G, H, J, K, L, M, N, P, Q, R, S, T,
               U, V>>
@@ -878,7 +1087,28 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 21 arguments types
+  /// Function for save 21 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
+  /// [d] is 3 element of container
+  /// [e] is 4 element of container
+  /// [f] is 5 element of container
+  /// [g] is 6 element of container
+  /// [h] is 7 element of container
+  /// [j] is 8 element of container
+  /// [k] is 9 element of container
+  /// [l] is 10 element of container
+  /// [m] is 11 element of container
+  /// [n] is 12 element of container
+  /// [p] is 13 element of container
+  /// [q] is 14 element of container
+  /// [r] is 15 element of container
+  /// [s] is 16 element of container
+  /// [t] is 17 element of container
+  /// [u] is 18 element of container
+  /// [v] is 19 element of container
+  /// [w] is 20 element of container
   static Future<
           FutureResult21<A, B, C, D, E, F, G, H, J, K, L, M, N, P, Q, R, S, T,
               U, V, W>>
@@ -956,7 +1186,29 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 22 arguments types
+  /// Function for save 22 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
+  /// [d] is 3 element of container
+  /// [e] is 4 element of container
+  /// [f] is 5 element of container
+  /// [g] is 6 element of container
+  /// [h] is 7 element of container
+  /// [j] is 8 element of container
+  /// [k] is 9 element of container
+  /// [l] is 10 element of container
+  /// [m] is 11 element of container
+  /// [n] is 12 element of container
+  /// [p] is 13 element of container
+  /// [q] is 14 element of container
+  /// [r] is 15 element of container
+  /// [s] is 16 element of container
+  /// [t] is 17 element of container
+  /// [u] is 18 element of container
+  /// [v] is 19 element of container
+  /// [w] is 20 element of container
+  /// [x] is 21 element of container
   static Future<
           FutureResult22<A, B, C, D, E, F, G, H, J, K, L, M, N, P, Q, R, S, T,
               U, V, W, X>>
@@ -1037,7 +1289,30 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 23 arguments types
+  /// Function for save 23 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
+  /// [d] is 3 element of container
+  /// [e] is 4 element of container
+  /// [f] is 5 element of container
+  /// [g] is 6 element of container
+  /// [h] is 7 element of container
+  /// [j] is 8 element of container
+  /// [k] is 9 element of container
+  /// [l] is 10 element of container
+  /// [m] is 11 element of container
+  /// [n] is 12 element of container
+  /// [p] is 13 element of container
+  /// [q] is 14 element of container
+  /// [r] is 15 element of container
+  /// [s] is 16 element of container
+  /// [t] is 17 element of container
+  /// [u] is 18 element of container
+  /// [v] is 19 element of container
+  /// [w] is 20 element of container
+  /// [x] is 21 element of container
+  /// [y] is 22 element of container
   static Future<
       FutureResult23<A, B, C, D, E, F, G, H, J, K, L, M, N, P, Q, R, S, T, U, V,
           W, X, Y>> wait23<A, B, C, D, E, F, G, H, J, K, L, M, N, P, Q, R, S, T,
@@ -1121,7 +1396,31 @@ extension FutureSaving on Future {
     );
   }
 
-  ///Function for save 24 arguments types
+  /// Function for save 24 arguments types
+  /// [a] is 0 element of container
+  /// [b] is 1 element of container
+  /// [c] is 2 element of container
+  /// [d] is 3 element of container
+  /// [e] is 4 element of container
+  /// [f] is 5 element of container
+  /// [g] is 6 element of container
+  /// [h] is 7 element of container
+  /// [j] is 8 element of container
+  /// [k] is 9 element of container
+  /// [l] is 10 element of container
+  /// [m] is 11 element of container
+  /// [n] is 12 element of container
+  /// [p] is 13 element of container
+  /// [q] is 14 element of container
+  /// [r] is 15 element of container
+  /// [s] is 16 element of container
+  /// [t] is 17 element of container
+  /// [u] is 18 element of container
+  /// [v] is 19 element of container
+  /// [w] is 20 element of container
+  /// [x] is 21 element of container
+  /// [y] is 22 element of container
+  /// [z] is 23 element of container
   static Future<
       FutureResult24<A, B, C, D, E, F, G, H, J, K, L, M, N, P, Q, R, S, T, U, V,
           W, X, Y, Z>> wait24<A, B, C, D, E, F, G, H, J, K, L, M, N, P, Q, R, S,
