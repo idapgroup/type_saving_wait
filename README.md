@@ -22,7 +22,7 @@ To use this plugin, add `type_saving_wait` as a [dependency in your pubspec.yaml
 ### Examples
 Here are small example that show you how to use this library.
 
-#### Creation of native page route
+#### Creation of Future.wait with two arguments
 ```dart
 FutureSaving.wait2(
     Future.value(3.14),
