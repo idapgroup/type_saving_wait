@@ -6,6 +6,93 @@ void main() async {
 
   generateTuples(alphabet, length);
   generateFutures(alphabet, length);
+  generateTests(alphabet, length);
+}
+
+void generateTests(String alphabet, int length) {
+  File tests = File('test/type_saving_wait_test.dart');
+  String result = 'import \'package:flutter_test/flutter_test.dart\';\n';
+  final results = [
+    [3.14, 'double'],
+    [15, 'int'],
+    [-1, 'int'],
+    ['TestObject()', 'TestObject']
+  ];
+
+  result += 'import \'package:type_saving_wait/type_saving_wait.dart\';\n\n';
+  result += 'class TestObject {}\n\n';
+  result += 'void main() {\n\n';
+
+  for (var i = 2; i <= length; i++) {
+    final letters = alphabet.substring(0, i);
+    final splitted = letters.split('');
+    final itterTypes = [];
+
+    result +=
+        'test(\'FutureSaving.wait$i should save values and values types\', () async {\n';
+    result += '\$0';
+
+    for (var element in splitted) {
+      final itterResult = (results..shuffle()).first[0];
+      itterTypes.add(results.first[1]);
+
+      result = result.replaceAll(
+          '\$0', 'final ${element.toLowerCase()}Value = $itterResult;');
+
+      result += '\n\$0';
+    }
+
+    result = result.replaceAll('\n\$0', '\n\n');
+
+    result += '\$0';
+
+    for (var element in splitted) {
+      result = result.replaceAll('\$0',
+          'final ${element.toLowerCase()} = Future.value(${element.toLowerCase()}Value);');
+
+      result += '\n\$0';
+    }
+
+    result = result.replaceAll('\n\$0', '\n\n');
+
+    result += 'final result = await FutureSaving.wait$i(\$0';
+
+    for (var element in splitted) {
+      result = result.replaceAll('\$0', '${element.toLowerCase()}');
+
+      result += ', \$0';
+    }
+
+    result = result.replaceAll(', \$0', ',);\n\n');
+
+    result += '\$0';
+
+    int j = 0;
+    for (var element in splitted) {
+      final type = itterTypes[j++];
+      result = result.replaceAll('\$0',
+          '$type ${element.toLowerCase()}Result = result.${element.toLowerCase()};');
+
+      result += '\n\$0';
+    }
+
+    result = result.replaceAll('\n\$0', '\n\n');
+
+    result += '\$0';
+
+    for (var element in splitted) {
+      final lower = element.toLowerCase();
+      result =
+          result.replaceAll('\$0', 'expect(${lower}Result, ${lower}Value);');
+
+      result += '\n\$0';
+    }
+
+    result = result.replaceAll('\n\$0', '\n});\n');
+  }
+
+  result += '}';
+  tests.writeAsStringSync(result);
 }
 
 void generateFutures(String alphabet, int length) {
