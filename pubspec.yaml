@@ -1,6 +1,6 @@
 name: type_saving_wait
 description: It is not really convenient to use Future.wait, cause it's leading to type erasing, so this lib created to help you save types while use Future.wait feature.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/idapgroup/type_saving_wait
 
 environment:

@@ -1,3 +1,7 @@
+## 1.0.1
+
+- Added generation of "documentation" for increase points on pub.get.
+
 ## 1.0.0
 
 - Unit tests added to project.
